@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { LayoutDashboard, FolderOpen, Mail, Settings, LogOut, Globe } from 'lucide-react';
+import { SITE_CONTENT } from '../constants';
 
 interface AdminLayoutProps {
   children: ReactNode;
@@ -29,7 +30,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
         <div className="p-8">
           <Link to="/" className="block">
             <h1 className="text-xl font-bold tracking-tighter hover:opacity-80 transition-opacity">
-              ROSHAN<span className="text-blue-500">.</span>
+              {SITE_CONTENT.brandName}<span className="text-blue-500">.</span>
             </h1>
             <p className="text-xs text-neutral-500 mt-1 uppercase tracking-wider font-semibold">Admin Panel</p>
           </Link>

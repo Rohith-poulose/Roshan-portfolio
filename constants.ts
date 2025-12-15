@@ -1,5 +1,45 @@
 import { Project, Service, Metric, Inquiry } from './types';
 
+// CENTRALIZED SITE CONTENT
+// Edit this section to update your details across the entire website
+export const SITE_CONTENT = {
+  name: "ROSHAN",
+  brandName: "ROSHAN", // Used in Navbar
+  role: "Editor & Strategist",
+  email: "hello@roshan.com",
+  phone: "+1 (555) 123-4567",
+  location: "Los Angeles, CA",
+  socials: {
+    instagram: "https://instagram.com",
+    twitter: "https://twitter.com",
+    linkedin: "https://linkedin.com",
+    vimeo: "https://vimeo.com"
+  },
+  hero: {
+    titlePrefix: "Visuals that ",
+    titleHighlight: "resonate.",
+    subtitle: "Crafting cinematic narratives and digital strategies for forward-thinking brands."
+  },
+  about: {
+    title: "The Story.",
+    bioParagraphs: [
+      "I'm Roshan, a visual storyteller and digital strategist based in Los Angeles. My journey began with a simple camera and a curiosity for how images can evoke emotion. Over the last decade, that curiosity has evolved into a career defined by cinematic precision.",
+      "I don't just edit videos; I craft narratives. Whether it's a high-energy commercial or a slow-burn documentary, my approach is always rooted in the \"why\" behind the shot.",
+      "Beyond the timeline, I help brands amplify their voice. Understanding the algorithm is just as important as understanding the lens. I bridge that gap."
+    ],
+    stats: {
+      yearsExp: "10+",
+      projects: "150+",
+      awards: "3",
+      turnaround: "Fast"
+    }
+  },
+  contact: {
+    title: "Let's talk.",
+    subtitle: "Have a project in mind? I'd love to hear about it. Fill out the form or reach out directly."
+  }
+};
+
 export const MOCK_PROJECTS: Project[] = [
   {
     id: '1',

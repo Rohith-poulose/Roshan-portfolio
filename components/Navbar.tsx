@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { SITE_CONTENT } from '../constants';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,7 +36,7 @@ export const Navbar: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link to="/" className="text-2xl font-bold tracking-tighter hover:opacity-80 transition-opacity">
-          ROSHAN<span className="text-blue-500">.</span>
+          {SITE_CONTENT.brandName}<span className="text-blue-500">.</span>
         </Link>
 
         {/* Desktop Nav */}

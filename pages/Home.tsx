@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Play } from 'lucide-react';
-import { MOCK_PROJECTS, MOCK_METRICS } from '../constants';
+import { MOCK_PROJECTS, MOCK_METRICS, SITE_CONTENT } from '../constants';
 import { Button } from '../components/ui/Button';
 
 export const Home: React.FC = () => {
@@ -22,10 +22,10 @@ export const Home: React.FC = () => {
 
         <div className="relative z-20 text-center max-w-4xl px-6 animate-fade-in">
           <h1 className="text-5xl md:text-8xl font-bold tracking-tighter mb-6 leading-tight">
-            Visuals that <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">resonate.</span>
+            {SITE_CONTENT.hero.titlePrefix}<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">{SITE_CONTENT.hero.titleHighlight}</span>
           </h1>
           <p className="text-xl md:text-2xl text-neutral-300 mb-10 font-light max-w-2xl mx-auto">
-            Crafting cinematic narratives and digital strategies for forward-thinking brands.
+            {SITE_CONTENT.hero.subtitle}
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
             <Link to="/work">

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from '../components/ui/Button';
 import { Mail, MapPin, Phone } from 'lucide-react';
+import { SITE_CONTENT } from '../constants';
 
 export const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -26,9 +27,9 @@ export const Contact: React.FC = () => {
     <div className="pt-32 pb-24 max-w-7xl mx-auto px-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
         <div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">Let's talk.</h1>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">{SITE_CONTENT.contact.title}</h1>
           <p className="text-xl text-neutral-400 mb-12">
-            Have a project in mind? I'd love to hear about it. Fill out the form or reach out directly.
+            {SITE_CONTENT.contact.subtitle}
           </p>
 
           <div className="space-y-8">
@@ -38,7 +39,7 @@ export const Contact: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-white">Email</h3>
-                <p className="text-neutral-400">hello@roshan.com</p>
+                <p className="text-neutral-400">{SITE_CONTENT.email}</p>
               </div>
             </div>
             
@@ -48,7 +49,7 @@ export const Contact: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-white">Phone</h3>
-                <p className="text-neutral-400">+1 (555) 123-4567</p>
+                <p className="text-neutral-400">{SITE_CONTENT.phone}</p>
               </div>
             </div>
 
@@ -58,7 +59,7 @@ export const Contact: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-white">Studio</h3>
-                <p className="text-neutral-400">Los Angeles, CA</p>
+                <p className="text-neutral-400">{SITE_CONTENT.location}</p>
               </div>
             </div>
           </div>

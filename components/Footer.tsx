@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Instagram, Linkedin, Mail, Twitter } from 'lucide-react';
+import { SITE_CONTENT } from '../constants';
 
 export const Footer: React.FC = () => {
   return (
@@ -13,10 +14,10 @@ export const Footer: React.FC = () => {
               Helping brands and artists tell their stories through cinematic visuals and strategic digital marketing.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="p-3 bg-neutral-900 rounded-full hover:bg-neutral-800 transition-colors"><Instagram size={20} /></a>
-              <a href="#" className="p-3 bg-neutral-900 rounded-full hover:bg-neutral-800 transition-colors"><Twitter size={20} /></a>
-              <a href="#" className="p-3 bg-neutral-900 rounded-full hover:bg-neutral-800 transition-colors"><Linkedin size={20} /></a>
-              <a href="mailto:hello@roshan.com" className="p-3 bg-neutral-900 rounded-full hover:bg-neutral-800 transition-colors"><Mail size={20} /></a>
+              <a href={SITE_CONTENT.socials.instagram} className="p-3 bg-neutral-900 rounded-full hover:bg-neutral-800 transition-colors"><Instagram size={20} /></a>
+              <a href={SITE_CONTENT.socials.twitter} className="p-3 bg-neutral-900 rounded-full hover:bg-neutral-800 transition-colors"><Twitter size={20} /></a>
+              <a href={SITE_CONTENT.socials.linkedin} className="p-3 bg-neutral-900 rounded-full hover:bg-neutral-800 transition-colors"><Linkedin size={20} /></a>
+              <a href={`mailto:${SITE_CONTENT.email}`} className="p-3 bg-neutral-900 rounded-full hover:bg-neutral-800 transition-colors"><Mail size={20} /></a>
             </div>
           </div>
           
@@ -41,7 +42,7 @@ export const Footer: React.FC = () => {
         </div>
         
         <div className="border-t border-neutral-900 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-neutral-600">
-          <p>&copy; {new Date().getFullYear()} Roshan. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {SITE_CONTENT.brandName}. All rights reserved.</p>
           <p className="mt-2 md:mt-0">Designed & Developed with ❤️</p>
         </div>
       </div>
